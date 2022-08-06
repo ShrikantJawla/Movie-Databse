@@ -23,7 +23,7 @@ async function main() {
 	try {
 		let nameOfMov = getEl("name");
 		let res = await fetch(
-			`http://www.omdbapi.com/?apikey=ee681166&s=${nameOfMov.value}`
+			`https://www.omdbapi.com/?apikey=ee681166&s=${nameOfMov.value}`
 		);
 		let data = await res.json();
 		if (data.Search !== undefined) {

@@ -13,7 +13,7 @@ let data;
 async function main() {
 	try {
 		let res = await fetch(
-			`http://www.omdbapi.com/?apikey=ee681166&t=${nameOfMov}`
+			`https://www.omdbapi.com/?apikey=ee681166&t=${nameOfMov}`
 		);
 		data = await res.json();
 		console.log(data);
