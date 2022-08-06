@@ -1,0 +1,193 @@
+/** @format */
+
+body {
+	background-size: cover;
+	padding: 0px;
+	margin: 0px;
+}
+* {
+	box-sizing: border-box;
+}
+#navbar {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	position: sticky;
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: 90px;
+	background-color: rgba(229, 107, 107, 0.825);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+#navbar > a {
+	color: white;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 5px;
+}
+#navbar > a:hover {
+	background-color: rgb(63, 61, 61);
+	border-radius: 20%;
+}
+#search {
+	height: 40px;
+	width: 56%;
+	padding: 4px;
+	background-color: white;
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+#search > input {
+	width: 90%;
+	border: none;
+	padding: 3px;
+	outline: none;
+}
+#search_icon:hover {
+	color: red;
+	font-size: 17px;
+}
+#box {
+	display: none;
+}
+#box.visible {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 4px;
+	position: absolute;
+	top: 74%;
+	z-index: 3;
+	height: 450px;
+	overflow: scroll;
+	width: 56%;
+	background-color: rgba(255, 255, 255, 0.867);
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	scroll-behavior: smooth;
+}
+
+#box > div {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	display: flex;
+	gap: 6px;
+	height: 170px;
+}
+#box > div:hover {
+	background-color: rgba(160, 160, 99, 0.523);
+}
+#box > div > div {
+	padding: 8px;
+}
+#box > div > div > p:first-child {
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+}
+#box > div > div > p:not(p:first-child) {
+	color: green;
+	font-size: 18px;
+}
+#box > div > img {
+	height: 100%;
+}
+
+#posterDisplay {
+	box-shadow: rgba(0, 0, 0, 0.179) 0px 3px 8px;
+	width: 100%;
+	height: 85vh;
+	margin: auto;
+	margin-top: 25px;
+	background-color: rgb(26, 16, 16);
+	position: relative;
+}
+#backImg {
+	width: 100%;
+	height: 100%;
+	opacity: 0.1;
+}
+#posterContent {
+	position: absolute;
+	top: 4%;
+	left: 3%;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: 1fr 2.5fr;
+	padding: 10px;
+	gap: 25px;
+	color: silver;
+	margin-right: 10px;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	padding-right: 22px;
+}
+#posterContent img {
+	height: 75vh;
+}
+
+#posterContent > div > div:first-child {
+	display: flex;
+	gap: 10px;
+}
+#posterContent > div > div:first-child > p {
+	font-size: 30px;
+	font-weight: bold;
+}
+#posterContent > div > div:nth-child(2) {
+	display: flex;
+	gap: 10px;
+	font-size: 22px;
+}
+#posterContent > div > div:nth-child(3) {
+	font-size: 19px;
+}
+#posterContent > div > div:nth-child(4) {
+	font-size: 19px;
+	display: block;
+}
+#posterContent > div > div:nth-child(4) > div {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+#posterContent > div > div:nth-child(4) > div > p:first-child {
+	font-weight: bold;
+	font-size: 22px;
+}
+#otherInfo {
+	margin-top: 15px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+		rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	width: 100%;
+	padding: 14px 9px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 10px;
+}
+
+#otherInfo > div {
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+		rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+		rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+		rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+		rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+	padding: 5px;
+	color: whitesmoke;
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	text-align: left;
+	padding-left: 14px;
+	background-color: rgba(34, 32, 32, 0.695);
+	font-size: 19px;
+}
+#otherInfo > div:last-child {
+	grid-area: 2/1/3/4;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}

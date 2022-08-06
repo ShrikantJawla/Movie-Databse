@@ -1,0 +1,107 @@
+/** @format */
+
+body {
+	background-image: url(./images/ahmet-yalcinkaya-aNrRsB2wLDk-unsplash.jpg);
+	background-size: cover;
+	padding: 0px;
+	margin: 0px;
+}
+* {
+	box-sizing: border-box;
+}
+#topheading {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	margin-bottom: -30px;
+}
+#navbar {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	position: relative;
+	position: sticky;
+	top: 0px;
+	width: 100%;
+	height: 340px;
+	background-color: rgba(46, 44, 44, 0.384);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 80px;
+}
+#navbar > a {
+	color: white;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 5px;
+}
+#navbar > a:hover {
+	background-color: rgb(63, 61, 61);
+	border-radius: 20%;
+}
+#search {
+	height: 48px;
+	width: 65%;
+	padding: 4px;
+	background-color: white;
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+#search > input {
+	width: 90%;
+	border: none;
+	padding: 3px;
+	outline: none;
+}
+#search_icon:hover {
+	color: red;
+	font-size: 17px;
+}
+#box {
+	display: none;
+}
+#box.visible {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 4px;
+	position: absolute;
+	top: 80%;
+	z-index: 2;
+	height: 450px;
+	overflow: scroll;
+	width: 60%;
+	background-color: rgba(255, 255, 255, 0.867);
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	scroll-behavior: smooth;
+}
+
+#box > div {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	display: flex;
+	gap: 6px;
+	height: 170px;
+}
+#box > div:hover {
+	background-color: rgba(160, 160, 99, 0.523);
+}
+#box > div > div {
+	padding: 8px;
+}
+#box > div > div > p:first-child {
+	font-size: 20px;
+	font-weight: bold;
+	color: red;
+}
+#box > div > div > p:first-child:hover {
+	font-size: 22px;
+}
+#box > div > div > p:not(p:first-child) {
+	color: green;
+	font-size: 18px;
+}
+#box > div > img {
+	height: 100%;
+}

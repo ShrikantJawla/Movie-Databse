@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="index.css">
+    <script
+			src="https://kit.fontawesome.com/5ccbe3257d.js"
+			crossorigin="anonymous"
+		></script>
+</head>
+<body>
+        <div id="navbar">
+            <h1 id="topheading">Welcome... <br> Click on the title of the movie in search bar</h1>
+			<div id="search">
+				<input
+                    class=""
+					type="text"
+					id="name"
+					placeholder="Search with the title of movie......."
+                    oninput='debounce(main,200)'
+                    onfocusin="boxFlex()"
+
+                    autocomplete="off"
+                    onkeydown="escKey()"
+                    onclick="boxFlex()"
+				/>
+				<i
+                    onsubmit="searchMov()"
+					id="search_icon"
+					onclick="searchMov()"
+					class="fa-solid fa-magnifying-glass"
+				></i>
+			</div>
+            <div id="box">
+                
+            </div>
+</body>
+</html>
+<script src="index.js"></script>
