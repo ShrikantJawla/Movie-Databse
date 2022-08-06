@@ -147,7 +147,6 @@ function append2(data) {
 }
 
 function rateCol(el) {
-	console.log(el);
 	if (+el <= 3) return "red";
 	else if (+el > 3 && +el <= 7) return "orange";
 	else return "green";
@@ -161,4 +160,52 @@ function selectObj(o) {
 	} else {
 		window.location.href = "../displayPage/display.html";
 	}
+}
+
+//Third Cruisor-----------------------------------------------------------------------------------------------------
+
+async function main2() {
+	try {
+		let res = await fetch(
+			`${baseUrl}/discover/movie?with_genres=18&primary_release_year=2022c&${api}`
+		);
+		let data = await res.json();
+		if (data.results !== undefined) {
+			append3(data.results);
+		}
+		// console.log(data.results);
+	} catch (e) {
+		console.log(e);
+	}
+}
+
+main2();
+
+function append3(data) {
+	let box = getEl("sCruisor");
+	box.innerHTML = null;
+
+	data.forEach((ele) => {
+		let div = createEl("div");
+		div.classList.add("movie");
+
+		div.innerHTML = `<img src="${imagUrl + ele.poster_path}" alt="${
+			ele.title
+		}" />
+                <div class="info">
+                    <h3>${ele.title}</h3>
+                    <p><span class="${rateCol(ele.vote_average)}">${
+			ele.vote_average
+		}</span></p>
+                </div>
+				<div class="des"><span style="color:red; font-weight:bold;">Overview: </span> <br/>
+					${ele.overview}
+				</div>`;
+		div.style.cursor = "pointer";
+		div.addEventListener("click", () => {
+			selectObj(ele);
+		});
+
+		box.append(div);
+	});
 }
