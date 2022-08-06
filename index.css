@@ -1,8 +1,6 @@
 /** @format */
 
 body {
-	background-image: url(./images/ahmet-yalcinkaya-aNrRsB2wLDk-unsplash.jpg);
-	background-size: cover;
 	padding: 0px;
 	margin: 0px;
 }
@@ -14,10 +12,10 @@ body {
 	margin-bottom: -30px;
 }
 #navbar {
+	background-image: url(./images/ahmet-yalcinkaya-aNrRsB2wLDk-unsplash.jpg);
+	background-size: cover;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 	position: relative;
-	position: sticky;
-	top: 0px;
 	width: 100%;
 	height: 340px;
 	background-color: rgba(46, 44, 44, 0.384);
@@ -104,4 +102,79 @@ body {
 }
 #box > div > img {
 	height: 100%;
+}
+#theatre {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 4px 8px;
+}
+#fCruisor {
+	margin: auto;
+	padding: 9px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin-top: 23px;
+	height: auto;
+	width: auto;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 1px;
+}
+.movie {
+	width: 250px;
+	text-align: center;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	padding: 5px;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.movie img {
+	height: 220px;
+	width: 100%;
+}
+.info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4px 9px;
+}
+.info h3 {
+	color: red;
+}
+.info span {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	padding: 7px;
+	background-color: green;
+	color: white;
+	font-size: 1.2rem;
+	font-family: "Times New Roman", Times, serif;
+}
+.info span.green {
+	background-color: green;
+}
+.info span.red {
+	background-color: red;
+}
+.info span.orange {
+	background-color: orange;
+}
+.des {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: white;
+	transform: translateY(101%);
+	transition: transform 0.3s;
+	max-height: 100%;
+	white-space: normal;
+	padding: 5px;
+	color: blue;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.movie:hover .des {
+	transform: translateY(0);
 }
