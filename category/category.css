@@ -159,7 +159,7 @@ body {
 	width: auto;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	gap: 1px;
+	gap: 25px;
 }
 .movie {
 	text-align: center;
