@@ -17,6 +17,9 @@ async function getGenre() {
 }
 getGenre();
 
+//For default display I am calling this fuction :
+fetchGenre("action");
+
 function displayGenres(d) {
 	categoriesBtn.innerHTML = null;
 	d.forEach((ele) => {
@@ -37,8 +40,7 @@ function displayGenres(d) {
 	});
 }
 
-//For default display I am calling this fuction :
-fetchGenre("action");
+
 
 async function fetchGenre(d) {
 	let res = await fetch(
