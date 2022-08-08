@@ -62,7 +62,7 @@ function displayParticularGenre(d) {
 					alt="${ele.title}"
 				/>
 				<div class="info">
-					<p>${ele.title}</p>
+					<h3>${ele.title}</h3>
 					<p><span class="${rateCol(ele.vote_average)}">${ele.vote_average}</span></p>
 				</div>
 				<div class="des"><span style="color:red; font-weight:bold;">Overview: </span> <br/>
