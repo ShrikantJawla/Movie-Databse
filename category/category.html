@@ -6,8 +6,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Movie Database</title>
-		<link rel="stylesheet" href="index.css" />
+		<title>Movies Categories</title>
+		<link rel="stylesheet" href="../category/category.css" />
 		<script
 			src="https://kit.fontawesome.com/5ccbe3257d.js"
 			crossorigin="anonymous"
@@ -15,14 +15,10 @@
 	</head>
 	<body>
 		<div class="nav1">
-			<a href="./index.html">Home</a>
+			<a href="../index.html">Home</a>
 			<a href="./category/category.html">Categories</a>
 		</div>
 		<div id="navbar">
-			<h1 id="topheading" style="background-color: transparent">
-				Welcome... <br />
-				Click on any movie to know more
-			</h1>
 			<div id="search">
 				<input
 					class=""
@@ -42,27 +38,12 @@
 					class="fa-solid fa-magnifying-glass"
 				></i>
 			</div>
-			<div id="box"></div>
 		</div>
-		<h1 id="theatre">Movies in theatres:</h1>
-		<div id="fCruisor">
-			<div class="movie">
-				<img
-					src="./images/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"
-					alt=""
-				/>
-				<div class="info">
-					<h1>Name</h1>
-					<p><span class="green">4.5</span></p>
-				</div>
-				<div class="des">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio
-					repellat provident fugiat exercitationem.
-				</div>
-			</div>
+		<div id="box"></div>
+		<div class="categoryDiv">
+			<!-- <button class="categoryBtn">Tranding</button> -->
 		</div>
-		<h1 id="theatre">Best dramas that were released this year:</h1>
-		<div id="sCruisor">
+		<div class="displayMovies">
 			<div class="movie">
 				<img
 					src="./images/start_remove-c851bdf8d3127a24e2d137a55b1b427378cd17385b01aec6e59d5d4b5f39d2ec.png"
@@ -80,4 +61,5 @@
 		</div>
 	</body>
 </html>
-<script src="index.js"></script>
+<script src="../category/category.js"></script>
+<script src="../index.js"></script>
