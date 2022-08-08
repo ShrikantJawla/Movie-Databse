@@ -23,8 +23,15 @@ function displayGenres(d) {
 		let btn = document.createElement("button");
 		btn.classList.add("categoryBtn");
 		btn.innerText = ele.name;
+		btn.style.cursor = "pointer";
 		btn.addEventListener("click", () => {
+			let btnArr = document.getElementsByClassName("categoryBtn"); //This is to remove previouslt selectedBtn classes.
+
+			for (let i = 0; i < btnArr.length; i++) {
+				btnArr[i].classList.remove("selectedBtn");
+			}
 			fetchGenre(ele.id);
+			btnClickClassToggle(btn);
 		});
 		categoriesBtn.append(btn);
 	});
@@ -77,4 +84,8 @@ function selectObj(o) {
 	} else {
 		window.location.href = "../displayPage/display.html";
 	}
+}
+
+function btnClickClassToggle(btn) {
+	btn.classList.toggle("selectedBtn");
 }
