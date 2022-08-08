@@ -78,9 +78,18 @@ function open(ele) {
 	}
 }
 
-function boxFlex() {
+// function boxFlex() {
+// 	let box = getEl("box");
+// 	box.classList.add("visible");
+// }
+function emptyString() {
+	let n = document.getElementById("name").value;
 	let box = getEl("box");
-	box.classList.add("visible");
+	if (n !== "") {
+			box.classList.add("visible");
+	}else{
+		box.classList.remove("visible");
+	}
 }
 
 function boxNone() {
