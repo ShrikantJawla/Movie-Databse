@@ -40,8 +40,6 @@ function displayGenres(d) {
 	});
 }
 
-
-
 async function fetchGenre(d) {
 	let res = await fetch(
 		`https://api.themoviedb.org/3/discover/movie?${api}&language=en-US&sort_by=popularity.desc&include_adult=false&page=1&with_genres=${d}`
@@ -64,7 +62,7 @@ function displayParticularGenre(d) {
 					alt="${ele.title}"
 				/>
 				<div class="info">
-					<h1>${ele.title}</h1>
+					<p>${ele.title}</p>
 					<p><span class="${rateCol(ele.vote_average)}">${ele.vote_average}</span></p>
 				</div>
 				<div class="des"><span style="color:red; font-weight:bold;">Overview: </span> <br/>
