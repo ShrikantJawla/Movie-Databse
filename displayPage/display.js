@@ -120,3 +120,13 @@ function display(d) {
 
 	box2.append(div1, awardDiv, otrRatingDiv, boxOffDiv);
 }
+
+// function emptyString() {
+// 	let n = document.getElementById("name").value;
+// 	let box = getEl("box");
+// 	if (n !== "") {
+// 		box.classList.add("visible");
+// 	} else {
+// 		box.classList.remove("visible");
+// 	}
+// }
